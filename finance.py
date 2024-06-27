@@ -1,8 +1,8 @@
-import yfinance as yf
+import yfinance as yf 
 
-# Download historical data for a stock
-msft = yf.Ticker("MSFT")
-msft_data = msft.history(period="max")
+tesla = yf.Ticker('TSLA')
 
-# Display the downloaded data
-msft_data.head()
+tesla_data = tesla.history(period='max')
+
+tesla_data.reset_index(inplace=True)
+tesla_data.head()
